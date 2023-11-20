@@ -87,3 +87,10 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+/* Add styles for the "Cuddle" button */
+button#cuddleBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 10px; /* Adjust the margin as needed */
+}

@@ -9,6 +9,19 @@ document.getElementById('backToMainBtn').addEventListener('click', function() {
     document.getElementById('apologyLetterContainer').style.display = 'none';
 });
 
+document.getElementById('cuddleBtn').addEventListener('click', function() {
+    // Display the GIF inside a SweetAlert2 modal
+    Swal.fire({
+        title: "Sending virtual huggies and cuddles 🤗", // Text to be displayed
+        imageUrl: 'cuddle.gif', // Replace with the actual path to your GIF
+        imageAlt: 'Cuddle GIF',
+        showCancelButton: false, // Set to true if you want a "Cancel" button
+        confirmButtonText: "Close",
+        confirmButtonColor: "#6495ED", // Customize the button color
+        reverseButtons: true,
+    });
+});
+
 document.getElementById('playAudioBtn').addEventListener('click', function() {
     var audioPlayer = document.getElementById('audioPlayer');
 

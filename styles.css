@@ -3,6 +3,11 @@ body {
     background-color: #f0f0f0;
     margin: 0;
     display: flex;
+    padding: 0;
+    background-image: url('resource/christmas.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -28,12 +33,12 @@ button {
 .boy, .girl {
     width: 50px;
     height: 100px;
-    background-color: #6495ED; /* Cornflower Blue */
+    background-color: #6495ED; 
     border-radius: 5px;
 }
 
 .girl {
-    background-color: #FF69B4; /* Hot Pink */
+    background-color: #FF69B4; 
     margin-left: 20px;
 }
 
@@ -46,7 +51,7 @@ button {
 #flower .petal {
     width: 30px;
     height: 60px;
-    background-color: #8B4513; /* Saddle Brown */
+    background-color: #8B4513;
     border-radius: 50% 50% 0 0;
     position: absolute;
     top: 0;
@@ -87,10 +92,10 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
-/* Add styles for the "Cuddle" button */
+
 button#cuddleBtn {
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
-    margin-right: 10px; /* Adjust the margin as needed */
+    margin-right: 10px; 
 }

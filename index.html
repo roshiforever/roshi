@@ -10,12 +10,15 @@
 <body>
     <div class="container">
         <h1>ROSHI</h1>
+        <h1 id="timerDisplay" style="display: none;">ROSHI</h1>
+        
         <button id="drawFlowerBtn">APOLOGY</button>
-        <button id="playAudioBtn">Play Audio</button>
-        
-        
+        <button id="playAudioBtn">Play Audio</button> 
     <button id="cuddleBtn">Cuddle</button>
-    <button id="marryMeBtn">Marry Me</button>
+    <button id="killBtn">Kill</button>
+    <button id="marryMeBtn" onclick="startMarryMeTimer()">Proving relationship</button>
+    <button id="letterBtn"  disabled onclick="disableletterMeButton()" >Mystery Letter</button>
+    
     <div id="boyApology">
             <div class="boy"></div>
             <div class="girl"></div>
@@ -43,12 +46,7 @@
             </div>
         </div>
     </div>
-    <script>
-        document.getElementById('marryMeBtn').addEventListener('click', function() {
-            
-            window.location.href = 'marryme/marryme.html';
-        });
-    </script>
+   
     <script src="script.js"></script>
 </body>
 </html>

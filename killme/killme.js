@@ -10,7 +10,6 @@ const clickCountElement = document.getElementById("clickCount");
 const gifs = [
   "https://media.giphy.com/media/VcKe87r5UxvUzO6lsm/giphy.gif",
   "https://media.giphy.com/media/aRfmnHSOheokn8914H/giphy.gif",
-  
 ];
 
 yesBtn.addEventListener("click", () => {

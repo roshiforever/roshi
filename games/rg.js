@@ -1,3 +1,5 @@
+
+
 let startTime;
 let bestTime = Infinity;
 
@@ -30,24 +32,24 @@ function appearShape() {
     startTime = new Date().getTime();
 }
 
-function disappearShape() {
-    const shape = document.getElementById('shape');
-    const reactionTimeElement = document.getElementById('reaction-time');
+    function disappearShape() {
+        const shape = document.getElementById('shape');
+        const reactionTimeElement = document.getElementById('reaction-time');
+
+        
+        shape.style.display = 'none';
+
+        
+        const endTime = new Date().getTime();
+        const reactionTime = endTime - startTime;
 
     
-    shape.style.display = 'none';
+        reactionTimeElement.textContent = 'Your reaction time: ' + reactionTime + ' ms';
 
-    
-    const endTime = new Date().getTime();
-    const reactionTime = endTime - startTime;
+        
+        bestTime = Math.min(bestTime, reactionTime);
 
-   
-    reactionTimeElement.textContent = 'Your reaction time: ' + reactionTime + ' ms';
-
-    
-    bestTime = Math.min(bestTime, reactionTime);
-
-    reactionTimeElement.textContent += ' | Best time: ' + bestTime + ' ms';
+        reactionTimeElement.textContent += ' | Best time: ' + bestTime + ' ms';
 
     
     setTimeout(appearShape, Math.random() * 2000);

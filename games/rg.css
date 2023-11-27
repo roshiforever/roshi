@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+#shape {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    display: none;
+}
+
+#reaction-time {
+    font-size: 24px;
+    margin-top: 20px;
+}

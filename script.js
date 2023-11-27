@@ -10,6 +10,9 @@ document.getElementById('letterBtn').addEventListener('click',function(){
 document.getElementById('killBtn').addEventListener('click',function(){
     window.location.href = 'killme/killme.html'
 });
+document.getElementById('gameBtn').addEventListener('click',function(){
+    window.location.href = 'games_home.html'
+});
 
 
 document.getElementById('backToMainBtn').addEventListener('click', function() {

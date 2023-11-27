@@ -1,6 +1,6 @@
 document.getElementById('rgBtn').addEventListener('click',function(){
     window.location.href = 'games/rg.html'
 });
-document.getElementById('fbBtn').addEventListener('click',function(){
-    window.location.href = 'games/flappyBird.html'
+document.getElementById('rpsBtn').addEventListener('click',function(){
+    window.location.href = 'games/rps.html'
 });

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #game-container {
+            text-align: center;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        #score {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        #choices {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .choice-button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <div id="score">Score: 0</div>
+        <div id="result">Choose: Rock, Paper, or Scissors</div>
+        <div id="choices">
+            <button class="choice-button" onclick="playerChoice('rock')">Rock</button>
+            <button class="choice-button" onclick="playerChoice('paper')">Paper</button>
+            <button class="choice-button" onclick="playerChoice('scissors')">Scissors</button>
+        </div>
+    </div>
+
+    <script>
+        let score = 0;
+
+        function playerChoice(choice) {
+            const choices = ['rock', 'paper', 'scissors'];
+            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+            const result = determineWinner(choice, computerChoice);
+            updateScore(result);
+            displayResult(choice, computerChoice, result);
+        }
+
+        function determineWinner(player, computer) {
+            if (player === computer) {
+                return 'It\'s a tie!';
+            } else if (
+                (player === 'rock' && computer === 'scissors') ||
+                (player === 'paper' && computer === 'rock') ||
+                (player === 'scissors' && computer === 'paper')
+            ) {
+                return 'You win!';
+            } else {
+                return 'You lose!';
+            }
+        }
+
+        function updateScore(result) {
+            if (result === 'You win!') {
+                score++;
+            } else if (result === 'You lose!') {
+                score--;
+            }
+            const scoreElement = document.getElementById('score');
+            scoreElement.textContent = `Score: ${score}`;
+        }
+
+        function displayResult(player, computer, result) {
+            const resultElement = document.getElementById('result');
+            resultElement.innerHTML = `You chose ${player}. Computer chose ${computer}. Result: ${result}`;
+        }
+    </script>
+</body>
+</html>
